@@ -325,6 +325,7 @@
 
         .project-card.featured {
             border-color: #1d4ed8;
+
             background:
                 linear-gradient(
                     145deg,
@@ -391,6 +392,7 @@
         .feature-list li {
             position: relative;
             padding-left: 19px;
+
             color: #94a3b8;
             font-size: 0.93rem;
         }
@@ -689,6 +691,7 @@
     ========================== -->
 
     <section class="hero" id="home">
+
         <div class="container">
 
             <div class="hero-content">
@@ -741,6 +744,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -753,13 +757,16 @@
         <div class="container">
 
             <div class="section-heading">
+
                 <span>About Me</span>
+
                 <h2>Backend Development</h2>
 
                 <p>
                     I enjoy building backend systems where APIs, databases,
                     business logic, and infrastructure work together.
                 </p>
+
             </div>
 
 
@@ -802,6 +809,7 @@
                     <h3>What I Work With</h3>
 
                     <ul>
+
                         <li>
                             <i class="fa-solid fa-code"></i>
                             Python & Django
@@ -836,6 +844,7 @@
                             <i class="fa-solid fa-vial"></i>
                             Pytest & Testing
                         </li>
+
                     </ul>
 
                 </div>
@@ -856,7 +865,9 @@
         <div class="container">
 
             <div class="section-heading">
+
                 <span>Projects</span>
+
                 <h2>Selected Projects</h2>
 
                 <p>
@@ -864,6 +875,7 @@
                     with APIs, databases, business logic, infrastructure and
                     backend performance.
                 </p>
+
             </div>
 
 
@@ -880,7 +892,7 @@
 
                         <div class="project-title">
 
-                            <h3>Ecommerce API & Platform</h3>
+                            <h3>Ecommerce Platform</h3>
 
                             <span class="featured-label">
                                 Featured Project
@@ -893,20 +905,19 @@
 
                     <p class="project-description">
 
-                        A full-featured Django ecommerce platform built to
-                        practice real-world backend development and more complex
-                        business logic. The project includes product management,
-                        authentication, cart management, orders, payments,
-                        reviews, dashboards and REST APIs.
+                        A full-featured ecommerce platform built with Django,
+                        combining a server-rendered MVT application with a
+                        REST API for backend functionality and client access.
 
-                        The system was designed with PostgreSQL as the primary
-                        relational database, Redis for caching and temporary
-                        data, and Celery for background processing.
+                        The project covers the main lifecycle of an ecommerce
+                        system, from product discovery and shopping cart
+                        management to checkout, orders, payments and customer
+                        reviews.
 
-                        A major focus of the project was handling real backend
-                        concerns such as stock validation, database consistency,
-                        cart synchronization, API filtering and pagination,
-                        testing, documentation and concurrent cart updates.
+                        The main focus was implementing realistic business rules
+                        and backend concerns such as stock validation,
+                        cart consistency, authentication, caching,
+                        background processing and concurrent updates.
 
                     </p>
 
@@ -918,15 +929,15 @@
                         <ul class="feature-list">
 
                             <li>
-                                Authentication and authorization using JWT
+                                JWT authentication and role-based authorization
                             </li>
 
                             <li>
-                                Product, category and product image management
+                                Product, category and image management
                             </li>
 
                             <li>
-                                Product filtering, searching, sorting and pagination
+                                Search, filtering, sorting and pagination
                             </li>
 
                             <li>
@@ -934,7 +945,7 @@
                             </li>
 
                             <li>
-                                Guest shopping cart using Redis/cache
+                                Redis-based guest shopping cart
                             </li>
 
                             <li>
@@ -942,15 +953,11 @@
                             </li>
 
                             <li>
-                                Cart synchronization during authentication
+                                Cart merging after user authentication
                             </li>
 
                             <li>
-                                Stock validation during cart and order operations
-                            </li>
-
-                            <li>
-                                Concurrency handling for cart updates
+                                Stock validation during cart operations
                             </li>
 
                             <li>
@@ -962,23 +969,19 @@
                             </li>
 
                             <li>
-                                Customer reviews and admin moderation
+                                Customer reviews and moderation
                             </li>
 
                             <li>
-                                Admin dashboard and management APIs
+                                Admin dashboard and management functionality
                             </li>
 
                             <li>
-                                API filtering and pagination
+                                Automated API and business-logic testing
                             </li>
 
                             <li>
-                                Automated tests with Pytest
-                            </li>
-
-                            <li>
-                                API documentation with Swagger / OpenAPI
+                                Swagger / OpenAPI documentation
                             </li>
 
                         </ul>
@@ -997,31 +1000,23 @@
                             </li>
 
                             <li>
-                                Redis for caching and temporary cart storage
+                                Redis for caching and temporary cart data
                             </li>
 
                             <li>
-                                Cache locking to reduce concurrent cart update conflicts
+                                Cache locking to handle concurrent cart updates
                             </li>
 
                             <li>
-                                Django ORM annotations for calculated product prices
+                                Django ORM annotations for database-level price calculations
                             </li>
 
                             <li>
-                                Service-oriented cart logic separated from views
+                                Celery for background task processing
                             </li>
 
                             <li>
                                 Dockerized development environment
-                            </li>
-
-                            <li>
-                                Background processing with Celery
-                            </li>
-
-                            <li>
-                                API-level automated testing
                             </li>
 
                         </ul>
@@ -1095,10 +1090,9 @@
                         pagination, synchronous and asynchronous execution,
                         background processing with Celery, and load testing.
 
-                        Working with other developers on this project also
-                        introduced practical experience with collaborative
-                        development, experimentation, benchmarking and comparing
-                        different backend approaches.
+                        Working with other developers also provided practical
+                        experience with collaborative development, experimentation,
+                        benchmarking and comparing different backend approaches.
 
                     </p>
 
@@ -1205,12 +1199,10 @@
                         around common library workflows such as book management,
                         authors, publishers, categories, loans and reservations.
 
-                        The project also includes a custom user system and
-                        role-based access control for different types of users.
-
-                        This project provided experience working as part of a
-                        development team and applying backend concepts in a
-                        larger multi-feature application.
+                        The project includes a custom user system and
+                        role-based access control for different types of users,
+                        while also providing experience with team-based backend
+                        development and a multi-feature application.
 
                     </p>
 
@@ -1299,14 +1291,14 @@
                     <p class="project-description">
 
                         A Django-based blog and comment platform that was one of
-                        my earlier backend projects. The project helped me move
+                        my earlier backend projects. It helped me transition
                         from traditional Django development toward REST API
                         development and introduced several backend technologies
-                        that I continue to use in larger projects.
+                        that I continued using in larger projects.
 
-                        It includes a custom user model, JWT authentication,
-                        blog and comment APIs, PostgreSQL, Redis, Celery and
-                        API documentation.
+                        The project includes a custom user model,
+                        authentication, blog and comment functionality,
+                        background tasks and API development.
 
                     </p>
 
@@ -1411,7 +1403,8 @@
                 <h2>Technical Skills</h2>
 
                 <p>
-                    Technologies and tools I currently use in backend development.
+                    Technologies, tools and languages I use or work with
+                    in backend development.
                 </p>
 
             </div>
@@ -1419,6 +1412,8 @@
 
             <div class="skills-grid">
 
+
+                <!-- BACKEND -->
 
                 <div class="skill-card">
 
@@ -1440,6 +1435,8 @@
                 </div>
 
 
+                <!-- DATABASES -->
+
                 <div class="skill-card">
 
                     <h3>
@@ -1458,6 +1455,8 @@
 
                 </div>
 
+
+                <!-- INFRASTRUCTURE -->
 
                 <div class="skill-card">
 
@@ -1479,6 +1478,8 @@
                 </div>
 
 
+                <!-- DEVELOPMENT -->
+
                 <div class="skill-card">
 
                     <h3>
@@ -1493,6 +1494,46 @@
                         <span class="tech">Pytest</span>
                         <span class="tech">OpenAPI</span>
                         <span class="tech">Swagger</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRAMMING LANGUAGES -->
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-solid fa-terminal"></i>
+                        Languages & Markup
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">Python</span>
+                        <span class="tech">SQL</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HUMAN LANGUAGES -->
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-solid fa-language"></i>
+                        Languages
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">Persian — Native</span>
+                        <span class="tech">English — B2</span>
 
                     </div>
 
@@ -1520,7 +1561,8 @@
                 <h2>What I'm Working On</h2>
 
                 <p>
-                    Current areas I am actively improving or preparing to learn next.
+                    Current areas I am actively improving or preparing
+                    to learn next.
                 </p>
 
             </div>
@@ -1616,11 +1658,11 @@
                 </h3>
 
                 <div class="university">
-                    University
+                    Islamic Azad University, Tehran East
                 </div>
 
                 <div class="date">
-                    2024 — Present
+                    2025 — Present
                 </div>
 
                 <p style="margin-top: 15px; color: #94a3b8;">
@@ -1717,4 +1759,3 @@
 
 </body>
 </html>
-
