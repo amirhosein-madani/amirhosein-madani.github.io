@@ -5,6 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const sections = document.querySelectorAll("main section[id]");
 
+    const navToggle = document.getElementById("navToggle");
+    const primaryNav = document.getElementById("primaryNav");
+
+    if (navToggle && primaryNav) {
+        navToggle.addEventListener("click", () => {
+            const isOpen = primaryNav.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+    }
+
 
     /* =========================
        Header on scroll
@@ -84,6 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
             target.scrollIntoView({
                 behavior: "smooth"
             });
+
+            if (primaryNav && primaryNav.classList.contains("open")) {
+                primaryNav.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
 
         });
 

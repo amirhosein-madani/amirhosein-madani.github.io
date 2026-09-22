@@ -1,9 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,75 +9,64 @@
         content="Amir Madani — Backend Developer specializing in Python, Django and REST APIs."
     >
 
+    <meta property="og:title" content="Amir Madani | Backend Developer">
+    <meta property="og:description" content="Backend developer working with Python, Django and Django REST Framework.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amirhosein-madani.github.io/">
+    <meta property="og:image" content="https://amirhosein-madani.github.io/favicon.svg">
+    <meta name="twitter:card" content="summary">
+
     <title>Amir Madani | Backend Developer</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 
 <body>
 
     <!-- ================= HEADER ================= -->
 
     <header class="header">
-
         <div class="container navbar">
 
             <a href="#home" class="logo">
                 AM<span>.</span>
             </a>
 
-            <nav class="nav">
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#projects">
-                    Projects
-                </a>
-
-                <a href="#skills">
-                    Skills
-                </a>
-
-                <a href="#learning">
-                    Learning
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
+            <nav class="nav" id="primaryNav">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#learning">Learning</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <a href="#contact" class="nav-button">
                 Let's Talk
             </a>
 
-        </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
+        </div>
     </header>
 
 
     <main>
-
 
         <!-- ================= HERO ================= -->
 
         <section id="home" class="hero">
 
             <div class="container hero-container">
-
 
                 <div class="hero-content">
 
@@ -99,23 +85,16 @@
                         web applications.
                     </p>
 
-
                     <div class="hero-actions">
 
-                        <a
-                            href="#projects"
-                            class="button primary"
-                        >
+                        <a href="#projects" class="button primary">
                             Explore Projects
                         </a>
 
-
-                        <a
-                            href="https://github.com/amirhosein-madani"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary"
-                        >
+                        <a href="https://github.com/amirhosein-madani"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="button secondary">
                             GitHub ↗
                         </a>
 
@@ -129,13 +108,10 @@
                     <div class="code-card">
 
                         <div class="code-header">
-
                             <span></span>
                             <span></span>
                             <span></span>
-
                         </div>
-
 
                         <pre><code>class Developer:
 
@@ -165,13 +141,11 @@
         </section>
 
 
-
         <!-- ================= ABOUT ================= -->
 
         <section id="about" class="section about">
 
             <div class="container">
-
 
                 <div class="section-header">
 
@@ -189,7 +163,6 @@
 
                 <div class="about-grid">
 
-
                     <div class="about-main">
 
                         <p>
@@ -197,7 +170,6 @@
                             designing APIs and working with databases.
                             My main focus is the Python and Django ecosystem.
                         </p>
-
 
                         <p>
                             I'm particularly interested in writing clean,
@@ -211,43 +183,19 @@
 
                     <div class="about-info">
 
-
                         <div class="info-item">
-
-                            <span>
-                                Focus
-                            </span>
-
-                            <strong>
-                                Backend Development
-                            </strong>
-
+                            <span>Focus</span>
+                            <strong>Backend Development</strong>
                         </div>
 
-
                         <div class="info-item">
-
-                            <span>
-                                Main Stack
-                            </span>
-
-                            <strong>
-                                Python / Django
-                            </strong>
-
+                            <span>Main Stack</span>
+                            <strong>Python / Django</strong>
                         </div>
 
-
                         <div class="info-item">
-
-                            <span>
-                                Interested In
-                            </span>
-
-                            <strong>
-                                APIs / Databases / Performance
-                            </strong>
-
+                            <span>Interested In</span>
+                            <strong>APIs / Databases / Performance</strong>
                         </div>
 
                     </div>
@@ -259,19 +207,15 @@
         </section>
 
 
-
         <!-- ================= PROJECTS ================= -->
 
         <section id="projects" class="section projects">
 
             <div class="container">
 
-
                 <div class="section-header section-header-row">
 
-
                     <div>
-
                         <p class="eyebrow">
                             Selected Work
                         </p>
@@ -279,40 +223,32 @@
                         <h2>
                             Projects
                         </h2>
-
                     </div>
-
 
                     <p class="section-description">
                         A selection of backend projects I've worked on
-                        while learning and building practical systems.
+                        while learning and building real-world systems.
                     </p>
 
                 </div>
 
 
-
                 <div class="projects-list">
 
 
-                    <!-- ================= PROJECT 01 ================= -->
+                    <!-- PROJECT 01 -->
 
                     <article class="project-card featured">
-
 
                         <div class="project-index">
                             01
                         </div>
 
-
                         <div class="project-body">
-
 
                             <div class="project-top">
 
-
                                 <div>
-
                                     <p class="project-type">
                                         E-commerce Platform
                                     </p>
@@ -320,9 +256,7 @@
                                     <h3>
                                         Ecommerce
                                     </h3>
-
                                 </div>
-
 
                                 <a
                                     href="https://github.com/amirhosein-madani/Ecommerce"
@@ -336,39 +270,11 @@
                             </div>
 
 
-
                             <p class="project-description">
-
                                 A full-featured Django ecommerce application
-                                built around practical backend requirements.
-                                The project includes authentication, product
-                                management, categories, cart, orders, payments,
-                                reviews and a dashboard for managing the
-                                application.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                The backend uses PostgreSQL for persistent data,
-                                Redis for caching and cart-related operations,
-                                and Celery for background processing. The
-                                application also includes stock validation,
-                                filtering, pagination, API documentation and
-                                automated tests with Pytest.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                One of the more challenging parts of the project
-                                was handling cart concurrency. A cache-based
-                                locking mechanism is used to prevent conflicting
-                                cart updates when multiple requests try to
-                                modify the same cart at the same time.
-
+                                with authentication, products, cart,
+                                orders, payments, reviews and dashboard
+                                functionality.
                             </p>
 
 
@@ -390,25 +296,19 @@
                     </article>
 
 
-
-                    <!-- ================= PROJECT 02 ================= -->
+                    <!-- PROJECT 02 -->
 
                     <article class="project-card">
-
 
                         <div class="project-index">
                             02
                         </div>
 
-
                         <div class="project-body">
-
 
                             <div class="project-top">
 
-
                                 <div>
-
                                     <p class="project-type">
                                         Performance / Research
                                     </p>
@@ -416,9 +316,7 @@
                                     <h3>
                                         API Latency Lab
                                     </h3>
-
                                 </div>
-
 
                                 <a
                                     href="https://github.com/abolfazlmirzaie/api-latency-lab"
@@ -432,37 +330,11 @@
                             </div>
 
 
-
                             <p class="project-description">
-
-                                A collaborative backend project focused on
-                                studying API performance and understanding how
-                                different implementation approaches affect
-                                latency and system behavior.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                The project explores database performance,
-                                Redis caching, synchronous and asynchronous
-                                processing, background tasks and load testing
-                                with Locust. Different approaches are tested
-                                and compared to better understand their
-                                performance characteristics.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                Working on this project also gave me experience
-                                with collaborative development and a more
-                                research-oriented approach to backend engineering,
-                                including experimentation, benchmarking and
-                                analyzing results.
-
+                                A collaborative backend laboratory for
+                                experimenting with API latency, database
+                                performance, Redis caching, asynchronous
+                                processing and load testing.
                             </p>
 
 
@@ -483,25 +355,19 @@
                     </article>
 
 
-
-                    <!-- ================= PROJECT 03 ================= -->
+                    <!-- PROJECT 03 -->
 
                     <article class="project-card">
-
 
                         <div class="project-index">
                             03
                         </div>
 
-
                         <div class="project-body">
-
 
                             <div class="project-top">
 
-
                                 <div>
-
                                     <p class="project-type">
                                         Team Project
                                     </p>
@@ -509,39 +375,24 @@
                                     <h3>
                                         Library Management
                                     </h3>
-
                                 </div>
+
+                                <a
+                                    href="https://github.com/amirhosein-madani/library-app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    GitHub ↗
+                                </a>
 
                             </div>
 
 
-
                             <p class="project-description">
-
                                 A collaborative library management backend
-                                designed to handle books, authors, categories,
+                                for managing books, authors, categories,
                                 publishers, loans, reservations and users.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                The project was developed as a team, providing
-                                practical experience with collaborative backend
-                                development, working with a shared codebase and
-                                integrating different parts of the application.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                The backend is built with Django and Django REST
-                                Framework and uses PostgreSQL for data storage,
-                                Redis for caching and Docker for containerized
-                                development.
-
                             </p>
 
 
@@ -561,25 +412,19 @@
                     </article>
 
 
-
-                    <!-- ================= PROJECT 04 ================= -->
+                    <!-- PROJECT 04 -->
 
                     <article class="project-card">
-
 
                         <div class="project-index">
                             04
                         </div>
 
-
                         <div class="project-body">
-
 
                             <div class="project-top">
 
-
                                 <div>
-
                                     <p class="project-type">
                                         REST API
                                     </p>
@@ -587,9 +432,7 @@
                                     <h3>
                                         Core
                                     </h3>
-
                                 </div>
-
 
                                 <a
                                     href="https://github.com/amirhosein-madani/core"
@@ -603,35 +446,11 @@
                             </div>
 
 
-
                             <p class="project-description">
-
-                                A Django-based blog and comment REST API
-                                developed to build a stronger foundation in
-                                backend development, API design and
-                                authentication.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                The project includes a custom user model,
-                                JWT authentication, blog posts and comments,
-                                PostgreSQL, Redis, Celery background tasks
+                                A Django REST API project featuring
+                                authentication, blog posts, comments,
+                                JWT authentication, background tasks
                                 and API documentation.
-
-                            </p>
-
-
-                            <p class="project-description">
-
-                                This project represents an earlier stage of
-                                my backend development journey and helped me
-                                move from traditional Django development
-                                toward building RESTful APIs and more
-                                structured backend applications.
-
                             </p>
 
 
@@ -651,7 +470,6 @@
 
                     </article>
 
-
                 </div>
 
             </div>
@@ -659,13 +477,11 @@
         </section>
 
 
-
         <!-- ================= SKILLS ================= -->
 
         <section id="skills" class="section skills">
 
             <div class="container">
-
 
                 <div class="section-header">
 
@@ -680,9 +496,7 @@
                 </div>
 
 
-
                 <div class="skills-grid">
-
 
                     <div class="skill-card">
 
@@ -696,11 +510,10 @@
 
                         <p>
                             Python, Django, Django REST Framework,
-                            REST API development and authentication.
+                            REST API development
                         </p>
 
                     </div>
-
 
 
                     <div class="skill-card">
@@ -714,12 +527,11 @@
                         </h3>
 
                         <p>
-                            PostgreSQL, SQL, relational databases,
-                            database design and query optimization.
+                            PostgreSQL, SQL, database design
+                            and query optimization
                         </p>
 
                     </div>
-
 
 
                     <div class="skill-card">
@@ -733,12 +545,11 @@
                         </h3>
 
                         <p>
-                            Docker, Docker Compose, Redis, Celery
-                            and background processing.
+                            Docker, Docker Compose, Redis,
+                            Celery and background processing
                         </p>
 
                     </div>
-
 
 
                     <div class="skill-card">
@@ -753,18 +564,16 @@
 
                         <p>
                             Git, GitHub, Pytest, API documentation
-                            and load testing with Locust.
+                            and load testing
                         </p>
 
                     </div>
-
 
                 </div>
 
             </div>
 
         </section>
-
 
 
         <!-- ================= LEARNING ================= -->
@@ -773,9 +582,7 @@
 
             <div class="container">
 
-
                 <div class="learning-wrapper">
-
 
                     <div>
 
@@ -784,106 +591,34 @@
                         </p>
 
                         <h2>
-                            What I'm working on now.
+                            Always working on
+                            the next thing.
                         </h2>
-
-                        <p class="learning-intro">
-
-                            Currently focusing on improving my backend
-                            development skills and strengthening my
-                            understanding of the tools and technologies
-                            I use in my projects.
-
-                        </p>
 
                     </div>
 
 
-
                     <div class="learning-list">
 
-
                         <div class="learning-item">
-
-                            <span>
-                                01
-                            </span>
-
-
-                            <div>
-
-                                <h3>
-                                    Improving Docker
-                                </h3>
-
-                                <p>
-
-                                    Going deeper into Docker and containerized
-                                    development, with a focus on Docker Compose,
-                                    networking, volumes, images, containers
-                                    and practical development workflows.
-
-                                </p>
-
-                            </div>
-
+                            <span>01</span>
+                            <p>Database concepts and SQL</p>
                         </div>
 
-
-
                         <div class="learning-item">
-
-                            <span>
-                                02
-                            </span>
-
-
-                            <div>
-
-                                <h3>
-                                    SQL Server
-                                </h3>
-
-                                <p>
-
-                                    Learning SQL Server and strengthening my
-                                    understanding of relational databases,
-                                    SQL queries, database design and working
-                                    with database management tools.
-
-                                </p>
-
-                            </div>
-
+                            <span>02</span>
+                            <p>Backend architecture</p>
                         </div>
 
-
-
                         <div class="learning-item">
-
-                            <span>
-                                03
-                            </span>
-
-
-                            <div>
-
-                                <h3>
-                                    Next Step: FastAPI
-                                </h3>
-
-                                <p>
-
-                                    FastAPI is one of my next steps for expanding
-                                    my Python backend experience and exploring
-                                    asynchronous API development.
-
-                                </p>
-
-                            </div>
-
+                            <span>03</span>
+                            <p>API performance and optimization</p>
                         </div>
 
+                        <div class="learning-item">
+                            <span>04</span>
+                            <p>Testing and production practices</p>
+                        </div>
 
                     </div>
 
@@ -894,39 +629,28 @@
         </section>
 
 
-
         <!-- ================= CONTACT ================= -->
 
         <section id="contact" class="section contact">
 
             <div class="container">
 
-
                 <div class="contact-box">
-
 
                     <p class="eyebrow">
                         Get In Touch
                     </p>
 
-
                     <h2>
                         Let's build something.
                     </h2>
 
-
                     <p>
-
-                        I'm open to junior backend developer opportunities
-                        where I can contribute to real-world projects and
-                        continue growing as a backend engineer.
-
+                        I'm open to junior backend developer
+                        opportunities and internships.
                     </p>
 
-
-
                     <div class="contact-actions">
-
 
                         <a
                             href="mailto:amirmadani901@gmail.com"
@@ -934,7 +658,6 @@
                         >
                             Email Me
                         </a>
-
 
                         <a
                             href="https://www.linkedin.com/in/amir-madanii/"
@@ -945,7 +668,6 @@
                             LinkedIn ↗
                         </a>
 
-
                         <a
                             href="https://github.com/amirhosein-madani"
                             target="_blank"
@@ -955,7 +677,6 @@
                             GitHub ↗
                         </a>
 
-
                     </div>
 
                 </div>
@@ -964,9 +685,7 @@
 
         </section>
 
-
     </main>
-
 
 
     <!-- ================= FOOTER ================= -->
@@ -988,10 +707,7 @@
     </footer>
 
 
-
     <script src="js/script.js"></script>
 
 </body>
-
 </html>
-
