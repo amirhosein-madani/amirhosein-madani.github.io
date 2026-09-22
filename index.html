@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amir Madani — backend developer working with Python, Django and Django REST Framework.">
 
     <title>Amir Madani | Backend Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,58 +17,186 @@
 <body>
 
     <header>
+        <div class="window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active">home</a>
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="#skills">skills</a>
+            <a href="#contact">contact</a>
         </nav>
     </header>
 
 
     <main>
 
-        <section id="home">
-            <h1>Amir Madani</h1>
-            <h2>Backend Developer</h2>
+        <section id="home" class="hero">
+            <div class="terminal">
+                <div class="terminal-titlebar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">amir@backend:~</span>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> whoami</p>
+                    <p class="output">Amir Madani — Backend Developer</p>
+                    <p><span class="prompt">$</span> cat focus.txt</p>
+                    <p class="output">Python · Django · Django REST Framework<br>
+                    Building REST APIs, containerized services, and<br>
+                    performance-benchmarked backends.</p>
+                    <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+                </div>
+            </div>
 
-            <p>
-                I build backend applications with Python and Django.
-            </p>
-
-            <a href="#projects">View My Projects</a>
+            <a href="#projects" class="btn">View projects →</a>
         </section>
 
 
         <section id="about">
-            <h2>About Me</h2>
+            <h2><span class="comment">//</span> about</h2>
 
             <p>
-                I'm a backend developer focused on building
-                web applications and REST APIs.
+                I'm a Computer Science student focused on backend development
+                with Python and Django. I build REST APIs and containerized
+                services, and I care about what's happening underneath —
+                from the queries an ORM generates to how caching and async
+                processing change latency under load.
+            </p>
+            <p>
+                Right now I'm growing a portfolio of Django/DRF projects
+                while working toward backend roles and freelance work.
             </p>
         </section>
 
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2><span class="comment">//</span> projects</h2>
 
-            <!-- Projects will be added here -->
+            <div class="repo-list">
+
+                <article class="repo-card">
+                    <div class="repo-head">
+                        <h3>drf-shop</h3>
+                        <span class="lang"><i class="dot" style="background:#3572A5"></i>Python</span>
+                    </div>
+                    <p>
+                        DRF-based e-commerce API with a Redis-backed cart,
+                        JWT and token auth, email verification and password
+                        reset, and Celery Beat for scheduled cleanup.
+                    </p>
+                    <ul class="tags">
+                        <li>Django REST Framework</li>
+                        <li>Redis</li>
+                        <li>Celery</li>
+                        <li>PostgreSQL</li>
+                        <li>Docker Compose</li>
+                        <li>GitHub Actions</li>
+                    </ul>
+                </article>
+
+                <article class="repo-card">
+                    <div class="repo-head">
+                        <h3>ecommerce-api</h3>
+                        <span class="lang"><i class="dot" style="background:#3572A5"></i>Python</span>
+                    </div>
+                    <p>
+                        Django e-commerce app with a session/Redis cart,
+                        AJAX product and checkout flows, coupons, and
+                        ZarinPal payment integration — currently being
+                        converted from MVT views into an API.
+                    </p>
+                    <ul class="tags">
+                        <li>Django</li>
+                        <li>Redis</li>
+                        <li>Celery</li>
+                        <li>Docker</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </article>
+
+                <article class="repo-card">
+                    <h3>library-app</h3>
+                    <p>
+                        Library management system with role-based access
+                        (Super Admin, Manager, Librarian, Member) enforced
+                        through custom DRF permission classes, and models
+                        for books, loans, and reservations.
+                    </p>
+                    <ul class="tags">
+                        <li>Django</li>
+                        <li>Django REST Framework</li>
+                        <li>PostgreSQL</li>
+                        <li>pytest</li>
+                    </ul>
+                </article>
+
+                <article class="repo-card">
+                    <h3>api-latency-lab</h3>
+                    <p>
+                        R&amp;D project measuring how database access,
+                        caching, pagination, serialization, and async vs.
+                        sync execution affect API latency, using k6 and
+                        Locust load tests across Django and FastAPI.
+                    </p>
+                    <ul class="tags">
+                        <li>Django</li>
+                        <li>FastAPI</li>
+                        <li>Redis</li>
+                        <li>k6</li>
+                        <li>Docker</li>
+                    </ul>
+                </article>
+
+            </div>
         </section>
 
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2><span class="comment">//</span> skills</h2>
 
-            <!-- Skills will be added here -->
+            <pre class="code-block" aria-label="Skills, listed as a requirements file"><code><span class="c"># languages &amp; frameworks</span>
+python
+django
+djangorestframework
+
+<span class="c"># data &amp; caching</span>
+postgresql
+redis
+
+<span class="c"># background jobs</span>
+celery
+celery-beat
+
+<span class="c"># devops</span>
+docker
+docker-compose
+github-actions
+nginx
+git
+
+<span class="c"># testing &amp; quality</span>
+pytest
+flake8
+black</code></pre>
         </section>
 
 
         <section id="contact">
-            <h2>Contact</h2>
+            <h2><span class="comment">//</span> contact</h2>
 
-            <!-- Contact information will be added here -->
+            <div class="terminal">
+                <div class="terminal-body">
+                    <p><span class="prompt">$</span> git clone amir --contact</p>
+                    <p class="output flags">
+                        <span>--email&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="mailto:your-email@example.com">your-email@example.com</a><br>
+                        <span>--github&nbsp;&nbsp;&nbsp;</span><a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a><br>
+                        <span>--linkedin</span><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">linkedin.com/in/your-username</a>
+                    </p>
+                </div>
+            </div>
         </section>
 
     </main>
