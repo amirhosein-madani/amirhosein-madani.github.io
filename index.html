@@ -3,208 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Amir Madani — backend developer working with Python, Django and Django REST Framework.">
+
+    <meta
+        name="description"
+        content="Amir Madani - Junior Backend Developer specializing in Python, Django, and REST APIs."
+    >
 
     <title>Amir Madani | Backend Developer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="window-dots" aria-hidden="true">
-            <span></span><span></span><span></span>
-        </div>
-        <nav>
-            <a href="#home" class="active">home</a>
-            <a href="#about">about</a>
-            <a href="#projects">projects</a>
-            <a href="#skills">skills</a>
-            <a href="#contact">contact</a>
+    <!-- ==================== Navbar ==================== -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                Amir<span>.</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#learning">Learning</a>
+                <a href="#contact">Contact</a>
+            </div>
+
         </nav>
     </header>
 
 
     <main>
 
+        <!-- ==================== Hero ==================== -->
         <section id="home" class="hero">
-            <div class="terminal">
-                <div class="terminal-titlebar">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">amir@backend:~</span>
+
+            <div class="container hero-content">
+
+                <p class="hero-label">
+                    Junior Backend Developer
+                </p>
+
+                <h1>
+                    Hi, I'm <span>Amir Madani</span>
+                </h1>
+
+                <p class="hero-description">
+                    I build backend applications and REST APIs
+                    using Python and Django.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
                 </div>
-                <div class="terminal-body">
-                    <p><span class="prompt">$</span> whoami</p>
-                    <p class="output">Amir Madani — Backend Developer</p>
-                    <p><span class="prompt">$</span> cat focus.txt</p>
-                    <p class="output">Python · Django · Django REST Framework<br>
-                    Building REST APIs, containerized services, and<br>
-                    performance-benchmarked backends.</p>
-                    <p><span class="prompt">$</span> <span class="cursor">_</span></p>
-                </div>
+
             </div>
 
-            <a href="#projects" class="btn">View projects →</a>
         </section>
 
 
-        <section id="about">
-            <h2><span class="comment">//</span> about</h2>
+        <!-- ==================== About ==================== -->
+        <section id="about" class="section about">
 
-            <p>
-                I'm a Computer Science student focused on backend development
-                with Python and Django. I build REST APIs and containerized
-                services, and I care about what's happening underneath —
-                from the queries an ORM generates to how caching and async
-                processing change latency under load.
-            </p>
-            <p>
-                Right now I'm growing a portfolio of Django/DRF projects
-                while working toward backend roles and freelance work.
-            </p>
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">About Me</p>
+                    <h2>Who I am</h2>
+                </div>
+
+                <div class="about-content">
+
+                    <p>
+                        I'm a backend developer focused on building
+                        web applications and REST APIs with Python
+                        and Django.
+                    </p>
+
+                    <p>
+                        I enjoy working with databases, API design,
+                        performance, testing, and backend architecture.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
 
-        <section id="projects">
-            <h2><span class="comment">//</span> projects</h2>
+        <!-- ==================== Projects ==================== -->
+        <section id="projects" class="section projects">
 
-            <div class="repo-list">
+            <div class="container">
 
-                <article class="repo-card">
-                    <div class="repo-head">
-                        <h3>drf-shop</h3>
-                        <span class="lang"><i class="dot" style="background:#3572A5"></i>Python</span>
+                <div class="section-heading">
+                    <p class="section-label">Projects</p>
+                    <h2>Things I've Built</h2>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Ecommerce -->
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <p class="project-number">01</p>
+
+                            <h3>Ecommerce</h3>
+
+                            <p>
+                                A Django-based ecommerce application
+                                with REST APIs, authentication,
+                                shopping cart, orders, payments,
+                                reviews, and more.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>DRF</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis</span>
+                                <span>Celery</span>
+                                <span>Docker</span>
+                            </div>
+
+                            <a
+                                href="https://github.com/amirhosein-madani/Ecommerce"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View on GitHub →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- API Latency Lab -->
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <p class="project-number">02</p>
+
+                            <h3>API Latency Lab</h3>
+
+                            <p>
+                                A backend performance lab focused on
+                                API latency, database performance,
+                                caching, asynchronous processing,
+                                and load testing.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Django</span>
+                                <span>FastAPI</span>
+                                <span>Redis</span>
+                                <span>PostgreSQL</span>
+                                <span>Celery</span>
+                                <span>Locust</span>
+                                <span>Docker</span>
+                            </div>
+
+                            <a
+                                href="https://github.com/abolfazlmirzaie/api-latency-lab"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View on GitHub →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Library Management -->
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <p class="project-number">03</p>
+
+                            <h3>Library Management</h3>
+
+                            <p>
+                                A collaborative library management
+                                backend for managing books, authors,
+                                categories, publishers, loans,
+                                reservations, and users.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>DRF</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis</span>
+                                <span>Docker</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Core -->
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <p class="project-number">04</p>
+
+                            <h3>Core</h3>
+
+                            <p>
+                                A Django REST API project featuring
+                                authentication, blog posts, comments,
+                                JWT authentication, background tasks,
+                                and API documentation.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Django</span>
+                                <span>DRF</span>
+                                <span>PostgreSQL</span>
+                                <span>JWT</span>
+                                <span>Celery</span>
+                                <span>Redis</span>
+                            </div>
+
+                            <a
+                                href="https://github.com/amirhosein-madani/core"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View on GitHub →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== Skills ==================== -->
+        <section id="skills" class="section skills">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Skills</p>
+                    <h2>My Toolkit</h2>
+                </div>
+
+                <div class="skills-grid">
+
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <p>
+                            Python, Django, Django REST Framework,
+                            REST API
+                        </p>
                     </div>
-                    <p>
-                        DRF-based e-commerce API with a Redis-backed cart,
-                        JWT and token auth, email verification and password
-                        reset, and Celery Beat for scheduled cleanup.
-                    </p>
-                    <ul class="tags">
-                        <li>Django REST Framework</li>
-                        <li>Redis</li>
-                        <li>Celery</li>
-                        <li>PostgreSQL</li>
-                        <li>Docker Compose</li>
-                        <li>GitHub Actions</li>
-                    </ul>
-                </article>
 
-                <article class="repo-card">
-                    <div class="repo-head">
-                        <h3>ecommerce-api</h3>
-                        <span class="lang"><i class="dot" style="background:#3572A5"></i>Python</span>
+                    <div class="skill-group">
+                        <h3>Database</h3>
+                        <p>
+                            PostgreSQL, SQL, Database Design
+                        </p>
                     </div>
-                    <p>
-                        Django e-commerce app with a session/Redis cart,
-                        AJAX product and checkout flows, coupons, and
-                        ZarinPal payment integration — currently being
-                        converted from MVT views into an API.
-                    </p>
-                    <ul class="tags">
-                        <li>Django</li>
-                        <li>Redis</li>
-                        <li>Celery</li>
-                        <li>Docker</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                </article>
 
-                <article class="repo-card">
-                    <h3>library-app</h3>
-                    <p>
-                        Library management system with role-based access
-                        (Super Admin, Manager, Librarian, Member) enforced
-                        through custom DRF permission classes, and models
-                        for books, loans, and reservations.
-                    </p>
-                    <ul class="tags">
-                        <li>Django</li>
-                        <li>Django REST Framework</li>
-                        <li>PostgreSQL</li>
-                        <li>pytest</li>
-                    </ul>
-                </article>
+                    <div class="skill-group">
+                        <h3>Infrastructure</h3>
+                        <p>
+                            Docker, Docker Compose, Redis, Celery
+                        </p>
+                    </div>
 
-                <article class="repo-card">
-                    <h3>api-latency-lab</h3>
-                    <p>
-                        R&amp;D project measuring how database access,
-                        caching, pagination, serialization, and async vs.
-                        sync execution affect API latency, using k6 and
-                        Locust load tests across Django and FastAPI.
-                    </p>
-                    <ul class="tags">
-                        <li>Django</li>
-                        <li>FastAPI</li>
-                        <li>Redis</li>
-                        <li>k6</li>
-                        <li>Docker</li>
-                    </ul>
-                </article>
+                    <div class="skill-group">
+                        <h3>Testing & Tools</h3>
+                        <p>
+                            Pytest, Git, GitHub, Locust
+                        </p>
+                    </div>
 
-            </div>
-        </section>
-
-
-        <section id="skills">
-            <h2><span class="comment">//</span> skills</h2>
-
-            <pre class="code-block" aria-label="Skills, listed as a requirements file"><code><span class="c"># languages &amp; frameworks</span>
-python
-django
-djangorestframework
-
-<span class="c"># data &amp; caching</span>
-postgresql
-redis
-
-<span class="c"># background jobs</span>
-celery
-celery-beat
-
-<span class="c"># devops</span>
-docker
-docker-compose
-github-actions
-nginx
-git
-
-<span class="c"># testing &amp; quality</span>
-pytest
-flake8
-black</code></pre>
-        </section>
-
-
-        <section id="contact">
-            <h2><span class="comment">//</span> contact</h2>
-
-            <div class="terminal">
-                <div class="terminal-body">
-                    <p><span class="prompt">$</span> git clone amir --contact</p>
-                    <p class="output flags">
-                        <span>--email&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="mailto:your-email@example.com">your-email@example.com</a><br>
-                        <span>--github&nbsp;&nbsp;&nbsp;</span><a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a><br>
-                        <span>--linkedin</span><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">linkedin.com/in/your-username</a>
-                    </p>
                 </div>
+
             </div>
+
+        </section>
+
+
+        <!-- ==================== Currently Learning ==================== -->
+        <section id="learning" class="section learning">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Currently Learning</p>
+                    <h2>What I'm Working On</h2>
+                </div>
+
+                <div class="learning-content">
+
+                    <p>
+                        Improving my knowledge of databases,
+                        backend architecture, API performance,
+                        testing, and production-oriented development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================== Contact ==================== -->
+        <section id="contact" class="section contact">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">Contact</p>
+                    <h2>Let's Connect</h2>
+                </div>
+
+                <p class="contact-description">
+                    I'm open to junior backend developer
+                    opportunities and internships.
+                </p>
+
+                <div class="contact-links">
+
+                    <a
+                        href="https://github.com/amirhosein-madani"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <!-- LinkedIn will be added later -->
+
+                </div>
+
+            </div>
+
         </section>
 
     </main>
 
 
-    <footer>
-        <p>© 2026 Amir Madani</p>
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 Amir Madani. All rights reserved.
+            </p>
+
+        </div>
+
     </footer>
+
 
     <script src="js/script.js"></script>
 
