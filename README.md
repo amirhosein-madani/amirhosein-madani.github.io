@@ -1,48 +1,169 @@
-# Amir Madani — Portfolio
+# Amir
 
-Personal portfolio website for **Amir Madani**, a backend developer
-focused on Python, Django, and building production-style REST APIs.
+**Backend Developer · Python · Django · Django REST Framework**
 
-🌐 **Live site:** [amirhosein-madani.github.io](https://amirhosein-madani.github.io/)
+📍 Iran
+💼 Open to Backend / Django opportunities
 
 ---
 
-## About
+## About Me
 
-I'm a backend developer working primarily in the Python ecosystem.
-This repository hosts the source of my personal portfolio — a
-single-page site that presents my projects, technical skills, and
-current areas of learning.
+I'm a backend developer focused on building RESTful APIs with **Python, Django, and Django REST Framework**.
 
-The site is intentionally lightweight: no frameworks, no build step,
-no dependencies. Just semantic HTML, one CSS file, and a small
-script for mobile navigation and small interactions.
+I enjoy working on backend systems where I can focus on API design, authentication, database interactions, testing, performance, and clean project structure.
+
+---
+
+## What I Focus On
+
+* REST API design
+* Django & Django REST Framework
+* Authentication & authorization
+* Database design and ORM
+* API performance & caching
+* Background tasks
+* Automated testing
+* Dockerized backend applications
+
+---
+
+## Projects
+
+### 🛒 E-commerce API
+
+A modular e-commerce backend built with Django REST Framework.
+
+**Highlights:**
+
+* Product & category management
+* Shopping cart
+* Checkout & orders
+* Payment integration
+* Reviews & wishlist
+* Customer support tickets
+* JWT authentication
+* Redis & Celery
+* API documentation
+* Automated testing
+* Dockerized development environment
+
+---
+
+### 📚 Library Management System
+
+A backend system for managing a library and its users.
+
+**Highlights:**
+
+* Custom user and role management
+* Books, authors, categories & publishers
+* Loan management
+* Reservations
+* Authentication & authorization
+* PostgreSQL
+* Redis
+* Celery
+* Docker
+* Automated testing
+
+---
+
+### 📰 Blog & Comment REST API
+
+A Django REST Framework project focused on building a structured blog backend with authentication, permissions, filtering, caching, background tasks, and automated tests.
+
+**Highlights:**
+
+* Blog post & category management
+* Comment system
+* JWT authentication
+* User registration & email verification
+* Password reset
+* Object-level permissions
+* Filtering, searching & ordering
+* Pagination
+* Redis caching
+* Celery background tasks
+* Celery Beat scheduling
+* Swagger / Redoc API documentation
+* pytest & pytest-django
+* Docker & Docker Compose
+
+🔗 **Repository:** [github.com/amirhosein-madani/core](https://github.com/amirhosein-madani/core?utm_source=chatgpt.com)
+
+---
+
+### ⚡ API Latency Lab
+
+A backend performance experimentation project focused on understanding API latency and different approaches to improving backend performance.
+
+**Topics explored:**
+
+* Database performance
+* Pagination
+* Redis caching
+* Synchronous vs asynchronous execution
+* Django vs FastAPI
+* Celery
+* Load testing with Locust
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Markup | Semantic HTML5 |
-| Styling | Vanilla CSS (custom properties, no framework) |
-| Behavior | Vanilla JavaScript (no libraries) |
-| Icons | Font Awesome 6 |
-| Hosting | GitHub Pages |
-| Fonts | System font stack |
+### Languages
+
+🐍 Python
+🗄️ SQL
+
+### Backend
+
+Django · Django REST Framework · FastAPI
+
+### Databases
+
+PostgreSQL · MySQL · SQL Server
+
+### Caching & Background Tasks
+
+Redis · Celery · Celery Beat
+
+### Testing
+
+pytest · pytest-django · Faker
+
+### DevOps
+
+Docker · Docker Compose · Git · GitHub
+
+### API Tools
+
+Swagger · Redoc · Postman
 
 ---
 
-## Features
+## Currently Learning
 
-- Fully responsive layout (mobile, tablet, desktop)
-- Dark, accessible color palette with sufficient contrast
-- Semantic HTML5 structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
-- Keyboard-friendly navigation with skip-to-content link
-- ARIA labels and screen-reader-only text for assistive technologies
-- No JavaScript required for content — JS only enhances interaction
-- Fast load (no build step, no bundler, no runtime dependencies)
+* Advanced Database Concepts
+* PostgreSQL
+* Backend Performance
+* API Architecture
+* Testing & Test Design
+* FastAPI
 
 ---
 
-## Project Structure
+## What I'm Working Toward
+
+Building backend systems that are not only functional, but also **maintainable, testable, and performant**.
+
+---
+
+## Contact
+
+📧 **Email:** [amirmadani901@gmail.com](mailto:amirmadani901@gmail.com)
+
+💼 **LinkedIn:** [linkedin.com/in/amir-madanii](https://www.linkedin.com/in/amir-madanii/?utm_source=chatgpt.com)
+
+🐙 **GitHub:** [github.com/amirhosein-madani](https://github.com/amirhosein-madani?utm_source=chatgpt.com)
