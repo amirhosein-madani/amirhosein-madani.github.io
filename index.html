@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,676 +7,1492 @@
 
     <meta
         name="description"
-        content="Amir Madani — Backend Developer specializing in Python, Django and REST APIs."
+        content="Amir Madani - Backend Developer specializing in Python, Django, REST APIs and backend development."
     >
-
-    <meta property="og:title" content="Amir Madani | Backend Developer">
-    <meta property="og:description" content="Backend developer working with Python, Django and Django REST Framework.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://amirhosein-madani.github.io/">
-    <meta property="og:image" content="https://amirhosein-madani.github.io/favicon.svg">
-    <meta name="twitter:card" content="summary">
 
     <title>Amir Madani | Backend Developer</title>
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <link rel="stylesheet" href="css/style.css">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(11, 17, 32, 0.88);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid #1f2937;
+        }
+
+        nav {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: #60a5fa;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        .nav-button {
+            padding: 9px 16px;
+            border: 1px solid #2563eb;
+            border-radius: 8px;
+            color: #93c5fd !important;
+        }
+
+        .nav-button:hover {
+            background: #2563eb;
+            color: white !important;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 88vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            margin-bottom: 20px;
+            padding: 7px 13px;
+
+            border: 1px solid #1d4ed8;
+            border-radius: 999px;
+
+            color: #93c5fd;
+            background: rgba(37, 99, 235, 0.08);
+
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            line-height: 1.05;
+            margin-bottom: 22px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.25rem, 3vw, 1.8rem);
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #94a3b8;
+            font-size: 1.08rem;
+            margin-bottom: 32px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 12px 19px;
+
+            border-radius: 9px;
+            border: 1px solid #334155;
+
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            color: #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 100px 0;
+            border-top: 1px solid #172033;
+        }
+
+        .section-heading {
+            margin-bottom: 50px;
+        }
+
+        .section-heading span {
+            color: #60a5fa;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin-top: 8px;
+            font-size: 2.3rem;
+            color: #f8fafc;
+        }
+
+        .section-heading p {
+            max-width: 700px;
+            margin-top: 12px;
+            color: #94a3b8;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: #94a3b8;
+            margin-bottom: 18px;
+        }
+
+        .about-text strong {
+            color: #e5e7eb;
+        }
+
+        .about-side {
+            padding: 25px;
+
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+
+            background: #0f172a;
+        }
+
+        .about-side h3 {
+            margin-bottom: 18px;
+            color: #f8fafc;
+        }
+
+        .about-side ul {
+            list-style: none;
+        }
+
+        .about-side li {
+            padding: 10px 0;
+            border-bottom: 1px solid #1f2937;
+            color: #94a3b8;
+        }
+
+        .about-side li:last-child {
+            border-bottom: none;
+        }
+
+        .about-side i {
+            width: 25px;
+            color: #60a5fa;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #0f172a;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+
+            padding: 32px;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #334155;
+            transform: translateY(-4px);
+        }
+
+        .project-card.featured {
+            border-color: #1d4ed8;
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(30, 64, 175, 0.12),
+                    rgba(15, 23, 42, 0.95)
+                );
+        }
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project-title h3 {
+            font-size: 1.5rem;
+            color: #f8fafc;
+        }
+
+        .featured-label {
+            padding: 4px 9px;
+            border-radius: 5px;
+
+            font-size: 0.7rem;
+            font-weight: 700;
+
+            color: #bfdbfe;
+            background: #172554;
+            border: 1px solid #1d4ed8;
+        }
+
+        .project-description {
+            color: #94a3b8;
+            margin-bottom: 24px;
+            max-width: 920px;
+        }
+
+        .project-section {
+            margin-top: 25px;
+        }
+
+        .project-section h4 {
+            margin-bottom: 12px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 28px;
+
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 19px;
+            color: #94a3b8;
+            font-size: 0.93rem;
+        }
+
+        .feature-list li::before {
+            content: "•";
+
+            position: absolute;
+            left: 0;
+
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech {
+            padding: 5px 10px;
+
+            border: 1px solid #334155;
+            border-radius: 6px;
+
+            color: #cbd5e1;
+            background: #111827;
+
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            margin-top: 25px;
+
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 9px 14px;
+
+            border-radius: 7px;
+            border: 1px solid #334155;
+
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            font-weight: 600;
+
+            transition: 0.25s;
+        }
+
+        .project-link:hover {
+            color: #60a5fa;
+            border-color: #60a5fa;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .skill-card {
+            padding: 25px;
+
+            background: #0f172a;
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 16px;
+            color: #f8fafc;
+            font-size: 1.1rem;
+        }
+
+        .skill-card h3 i {
+            margin-right: 8px;
+            color: #60a5fa;
+        }
+
+        /* =========================
+           LEARNING
+        ========================== */
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .learning-card {
+            padding: 26px;
+
+            background: #0f172a;
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+        }
+
+        .learning-card .number {
+            color: #60a5fa;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .learning-card h3 {
+            margin: 8px 0 12px;
+            color: #f8fafc;
+        }
+
+        .learning-card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-card {
+            padding: 30px;
+
+            background: #0f172a;
+            border: 1px solid #1f2937;
+            border-radius: 14px;
+        }
+
+        .education-card h3 {
+            color: #f8fafc;
+            margin-bottom: 6px;
+        }
+
+        .education-card .university {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+
+        .education-card .date {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            max-width: 800px;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 11px 15px;
+
+            border: 1px solid #334155;
+            border-radius: 8px;
+
+            color: #cbd5e1;
+
+            transition: 0.25s;
+        }
+
+        .contact-link:hover {
+            border-color: #60a5fa;
+            color: #60a5fa;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 0;
+
+            border-top: 1px solid #172033;
+
+            color: #64748b;
+            text-align: center;
+
+            font-size: 0.85rem;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 80vh;
+                padding: 60px 0;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .project-card {
+                padding: 22px;
+            }
+
+            .project-top {
+                flex-direction: column;
+            }
+
+            .section-heading h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header class="header">
-        <div class="container navbar">
+<header>
+    <div class="container">
+        <nav>
 
             <a href="#home" class="logo">
-                AM<span>.</span>
+                Amir<span>.</span>
             </a>
 
-            <nav class="nav" id="primaryNav">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#learning">Learning</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact" class="nav-button">Let's Talk</a></li>
+            </ul>
 
-            <a href="#contact" class="nav-button">
-                Let's Talk
-            </a>
+        </nav>
+    </div>
+</header>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+
+<main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    Backend Developer
+                </span>
+
+                <h1>
+                    Amir <span>Madani</span>
+                </h1>
+
+                <h2>
+                    Python & Django Backend Developer
+                </h2>
+
+                <p>
+                    I build backend systems and REST APIs with Python and Django,
+                    focusing on clean architecture, database design,
+                    performance, testing, and real-world backend problems.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="https://github.com/amirhosein-madani"
+                        target="_blank"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+
+                    <a
+                        href="#projects"
+                        class="btn btn-secondary"
+                    >
+                        View Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-secondary"
+                    >
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
-    </header>
+    </section>
 
 
-    <main>
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-        <!-- ================= HERO ================= -->
+    <section id="about">
 
-        <section id="home" class="hero">
+        <div class="container">
 
-            <div class="container hero-container">
+            <div class="section-heading">
+                <span>About Me</span>
+                <h2>Backend Development</h2>
 
-                <div class="hero-content">
-
-                    <p class="eyebrow">
-                        Backend Developer
-                    </p>
-
-                    <h1>
-                        Building reliable
-                        <span>backend systems.</span>
-                    </h1>
-
-                    <p class="hero-text">
-                        I'm Amir Madani, a backend developer focused on
-                        Python, Django, REST APIs and building practical
-                        web applications.
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="#projects" class="button primary">
-                            Explore Projects
-                        </a>
-
-                        <a href="https://github.com/amirhosein-madani"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="button secondary">
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-side">
-
-                    <div class="code-card">
-
-                        <div class="code-header">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <pre><code>class Developer:
-
-    name = "Amir Madani"
-    role = "Backend Developer"
-
-    stack = [
-        "Python",
-        "Django",
-        "DRF",
-        "PostgreSQL",
-        "Redis"
-    ]
-
-    focus = [
-        "APIs",
-        "Performance",
-        "Testing"
-    ]</code></pre>
-
-                    </div>
-
-                </div>
-
+                <p>
+                    I enjoy building backend systems where APIs, databases,
+                    business logic, and infrastructure work together.
+                </p>
             </div>
 
-        </section>
 
+            <div class="about-grid">
 
-        <!-- ================= ABOUT ================= -->
-
-        <section id="about" class="section about">
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <p class="eyebrow">
-                        About
-                    </p>
-
-                    <h2>
-                        A backend developer
-                        who likes understanding how things work.
-                    </h2>
-
-                </div>
-
-
-                <div class="about-grid">
-
-                    <div class="about-main">
-
-                        <p>
-                            I enjoy building backend applications,
-                            designing APIs and working with databases.
-                            My main focus is the Python and Django ecosystem.
-                        </p>
-
-                        <p>
-                            I'm particularly interested in writing clean,
-                            maintainable code and understanding what happens
-                            behind the API — from database queries and caching
-                            to background tasks and performance.
-                        </p>
-
-                    </div>
-
-
-                    <div class="about-info">
-
-                        <div class="info-item">
-                            <span>Focus</span>
-                            <strong>Backend Development</strong>
-                        </div>
-
-                        <div class="info-item">
-                            <span>Main Stack</span>
-                            <strong>Python / Django</strong>
-                        </div>
-
-                        <div class="info-item">
-                            <span>Interested In</span>
-                            <strong>APIs / Databases / Performance</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= PROJECTS ================= -->
-
-        <section id="projects" class="section projects">
-
-            <div class="container">
-
-                <div class="section-header section-header-row">
-
-                    <div>
-                        <p class="eyebrow">
-                            Selected Work
-                        </p>
-
-                        <h2>
-                            Projects
-                        </h2>
-                    </div>
-
-                    <p class="section-description">
-                        A selection of backend projects I've worked on
-                        while learning and building real-world systems.
-                    </p>
-
-                </div>
-
-
-                <div class="projects-list">
-
-
-                    <!-- PROJECT 01 -->
-
-                    <article class="project-card featured">
-
-                        <div class="project-index">
-                            01
-                        </div>
-
-                        <div class="project-body">
-
-                            <div class="project-top">
-
-                                <div>
-                                    <p class="project-type">
-                                        E-commerce Platform
-                                    </p>
-
-                                    <h3>
-                                        Ecommerce
-                                    </h3>
-                                </div>
-
-                                <a
-                                    href="https://github.com/amirhosein-madani/Ecommerce"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    GitHub ↗
-                                </a>
-
-                            </div>
-
-
-                            <p class="project-description">
-                                A full-featured Django ecommerce application
-                                with authentication, products, cart,
-                                orders, payments, reviews and dashboard
-                                functionality.
-                            </p>
-
-
-                            <div class="tech-list">
-
-                                <span>Python</span>
-                                <span>Django</span>
-                                <span>DRF</span>
-                                <span>PostgreSQL</span>
-                                <span>Redis</span>
-                                <span>Celery</span>
-                                <span>Docker</span>
-                                <span>Pytest</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 02 -->
-
-                    <article class="project-card">
-
-                        <div class="project-index">
-                            02
-                        </div>
-
-                        <div class="project-body">
-
-                            <div class="project-top">
-
-                                <div>
-                                    <p class="project-type">
-                                        Performance / Research
-                                    </p>
-
-                                    <h3>
-                                        API Latency Lab
-                                    </h3>
-                                </div>
-
-                                <a
-                                    href="https://github.com/abolfazlmirzaie/api-latency-lab"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    GitHub ↗
-                                </a>
-
-                            </div>
-
-
-                            <p class="project-description">
-                                A collaborative backend laboratory for
-                                experimenting with API latency, database
-                                performance, Redis caching, asynchronous
-                                processing and load testing.
-                            </p>
-
-
-                            <div class="tech-list">
-
-                                <span>Django</span>
-                                <span>FastAPI</span>
-                                <span>PostgreSQL</span>
-                                <span>Redis</span>
-                                <span>Celery</span>
-                                <span>Locust</span>
-                                <span>Docker</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 03 -->
-
-                    <article class="project-card">
-
-                        <div class="project-index">
-                            03
-                        </div>
-
-                        <div class="project-body">
-
-                            <div class="project-top">
-
-                                <div>
-                                    <p class="project-type">
-                                        Team Project
-                                    </p>
-
-                                    <h3>
-                                        Library Management
-                                    </h3>
-                                </div>
-
-                                <a
-                                    href="https://github.com/amirhosein-madani/library-app"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    GitHub ↗
-                                </a>
-
-                            </div>
-
-
-                            <p class="project-description">
-                                A collaborative library management backend
-                                for managing books, authors, categories,
-                                publishers, loans, reservations and users.
-                            </p>
-
-
-                            <div class="tech-list">
-
-                                <span>Python</span>
-                                <span>Django</span>
-                                <span>DRF</span>
-                                <span>PostgreSQL</span>
-                                <span>Redis</span>
-                                <span>Docker</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PROJECT 04 -->
-
-                    <article class="project-card">
-
-                        <div class="project-index">
-                            04
-                        </div>
-
-                        <div class="project-body">
-
-                            <div class="project-top">
-
-                                <div>
-                                    <p class="project-type">
-                                        REST API
-                                    </p>
-
-                                    <h3>
-                                        Core
-                                    </h3>
-                                </div>
-
-                                <a
-                                    href="https://github.com/amirhosein-madani/core"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-                                    GitHub ↗
-                                </a>
-
-                            </div>
-
-
-                            <p class="project-description">
-                                A Django REST API project featuring
-                                authentication, blog posts, comments,
-                                JWT authentication, background tasks
-                                and API documentation.
-                            </p>
-
-
-                            <div class="tech-list">
-
-                                <span>Python</span>
-                                <span>Django</span>
-                                <span>DRF</span>
-                                <span>PostgreSQL</span>
-                                <span>JWT</span>
-                                <span>Celery</span>
-                                <span>Redis</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SKILLS ================= -->
-
-        <section id="skills" class="section skills">
-
-            <div class="container">
-
-                <div class="section-header">
-
-                    <p class="eyebrow">
-                        Skills
-                    </p>
-
-                    <h2>
-                        My technical toolkit
-                    </h2>
-
-                </div>
-
-
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Backend
-                        </h3>
-
-                        <p>
-                            Python, Django, Django REST Framework,
-                            REST API development
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Databases
-                        </h3>
-
-                        <p>
-                            PostgreSQL, SQL, database design
-                            and query optimization
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Infrastructure
-                        </h3>
-
-                        <p>
-                            Docker, Docker Compose, Redis,
-                            Celery and background processing
-                        </p>
-
-                    </div>
-
-
-                    <div class="skill-card">
-
-                        <span class="skill-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Development
-                        </h3>
-
-                        <p>
-                            Git, GitHub, Pytest, API documentation
-                            and load testing
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= LEARNING ================= -->
-
-        <section id="learning" class="section learning">
-
-            <div class="container">
-
-                <div class="learning-wrapper">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            Currently Learning
-                        </p>
-
-                        <h2>
-                            Always working on
-                            the next thing.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="learning-list">
-
-                        <div class="learning-item">
-                            <span>01</span>
-                            <p>Database concepts and SQL</p>
-                        </div>
-
-                        <div class="learning-item">
-                            <span>02</span>
-                            <p>Backend architecture</p>
-                        </div>
-
-                        <div class="learning-item">
-                            <span>03</span>
-                            <p>API performance and optimization</p>
-                        </div>
-
-                        <div class="learning-item">
-                            <span>04</span>
-                            <p>Testing and production practices</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CONTACT ================= -->
-
-        <section id="contact" class="section contact">
-
-            <div class="container">
-
-                <div class="contact-box">
-
-                    <p class="eyebrow">
-                        Get In Touch
-                    </p>
-
-                    <h2>
-                        Let's build something.
-                    </h2>
+                <div class="about-text">
 
                     <p>
-                        I'm open to junior backend developer
-                        opportunities and internships.
+                        I'm a backend developer focused on the Python ecosystem,
+                        especially <strong>Django</strong> and
+                        <strong>Django REST Framework</strong>.
                     </p>
 
-                    <div class="contact-actions">
+                    <p>
+                        My main experience comes from building complete backend
+                        projects rather than only working with isolated tutorials.
+                        I have worked with authentication, authorization,
+                        relational databases, caching, background tasks,
+                        Dockerized environments, API documentation and automated testing.
+                    </p>
+
+                    <p>
+                        I am particularly interested in understanding what happens
+                        behind an API — from database queries and business rules
+                        to concurrency, caching, background processing and system
+                        performance.
+                    </p>
+
+                    <p>
+                        Currently, I am strengthening my database knowledge,
+                        improving my Docker skills, and preparing to expand my
+                        Python backend experience with FastAPI.
+                    </p>
+
+                </div>
+
+
+                <div class="about-side">
+
+                    <h3>What I Work With</h3>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-code"></i>
+                            Python & Django
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-network-wired"></i>
+                            REST APIs & DRF
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-database"></i>
+                            PostgreSQL & SQL
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-memory"></i>
+                            Redis & Caching
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-gears"></i>
+                            Celery & Background Tasks
+                        </li>
+
+                        <li>
+                            <i class="fa-brands fa-docker"></i>
+                            Docker & Docker Compose
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-vial"></i>
+                            Pytest & Testing
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span>Projects</span>
+                <h2>Selected Projects</h2>
+
+                <p>
+                    A selection of backend projects demonstrating my experience
+                    with APIs, databases, business logic, infrastructure and
+                    backend performance.
+                </p>
+            </div>
+
+
+            <div class="projects">
+
+
+                <!-- =========================
+                     ECOMMERCE
+                ========================== -->
+
+                <article class="project-card featured">
+
+                    <div class="project-top">
+
+                        <div class="project-title">
+
+                            <h3>Ecommerce API & Platform</h3>
+
+                            <span class="featured-label">
+                                Featured Project
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="project-description">
+
+                        A full-featured Django ecommerce platform built to
+                        practice real-world backend development and more complex
+                        business logic. The project includes product management,
+                        authentication, cart management, orders, payments,
+                        reviews, dashboards and REST APIs.
+
+                        The system was designed with PostgreSQL as the primary
+                        relational database, Redis for caching and temporary
+                        data, and Celery for background processing.
+
+                        A major focus of the project was handling real backend
+                        concerns such as stock validation, database consistency,
+                        cart synchronization, API filtering and pagination,
+                        testing, documentation and concurrent cart updates.
+
+                    </p>
+
+
+                    <div class="project-section">
+
+                        <h4>Key Features</h4>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                Authentication and authorization using JWT
+                            </li>
+
+                            <li>
+                                Product, category and product image management
+                            </li>
+
+                            <li>
+                                Product filtering, searching, sorting and pagination
+                            </li>
+
+                            <li>
+                                Discount and final-price calculation
+                            </li>
+
+                            <li>
+                                Guest shopping cart using Redis/cache
+                            </li>
+
+                            <li>
+                                Database-backed cart for authenticated users
+                            </li>
+
+                            <li>
+                                Cart synchronization during authentication
+                            </li>
+
+                            <li>
+                                Stock validation during cart and order operations
+                            </li>
+
+                            <li>
+                                Concurrency handling for cart updates
+                            </li>
+
+                            <li>
+                                Order and checkout workflow
+                            </li>
+
+                            <li>
+                                Payment integration and payment workflow
+                            </li>
+
+                            <li>
+                                Customer reviews and admin moderation
+                            </li>
+
+                            <li>
+                                Admin dashboard and management APIs
+                            </li>
+
+                            <li>
+                                API filtering and pagination
+                            </li>
+
+                            <li>
+                                Automated tests with Pytest
+                            </li>
+
+                            <li>
+                                API documentation with Swagger / OpenAPI
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="project-section">
+
+                        <h4>Technical Highlights</h4>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                PostgreSQL for relational data and transactional workflows
+                            </li>
+
+                            <li>
+                                Redis for caching and temporary cart storage
+                            </li>
+
+                            <li>
+                                Cache locking to reduce concurrent cart update conflicts
+                            </li>
+
+                            <li>
+                                Django ORM annotations for calculated product prices
+                            </li>
+
+                            <li>
+                                Service-oriented cart logic separated from views
+                            </li>
+
+                            <li>
+                                Dockerized development environment
+                            </li>
+
+                            <li>
+                                Background processing with Celery
+                            </li>
+
+                            <li>
+                                API-level automated testing
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="project-section">
+
+                        <h4>Tech Stack</h4>
+
+                        <div class="tech-stack">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">Django</span>
+                            <span class="tech">Django REST Framework</span>
+                            <span class="tech">PostgreSQL</span>
+                            <span class="tech">Redis</span>
+                            <span class="tech">Celery</span>
+                            <span class="tech">JWT</span>
+                            <span class="tech">Pytest</span>
+                            <span class="tech">Docker</span>
+                            <span class="tech">Docker Compose</span>
+                            <span class="tech">OpenAPI</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-links">
 
                         <a
-                            href="mailto:amirmadani901@gmail.com"
-                            class="button primary"
-                        >
-                            Email Me
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/in/amir-madanii/"
+                            href="https://github.com/amirhosein-madani/Ecommerce"
                             target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary"
+                            class="project-link"
                         >
-                            LinkedIn ↗
+                            <i class="fa-brands fa-github"></i>
+                            View on GitHub
                         </a>
 
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     API LATENCY LAB
+                ========================== -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-title">
+
+                            <h3>API Latency Lab</h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="project-description">
+
+                        A collaborative backend performance and experimentation
+                        project focused on understanding API latency and the
+                        effect of different backend implementation strategies.
+
+                        The project explores database performance, Redis caching,
+                        pagination, synchronous and asynchronous execution,
+                        background processing with Celery, and load testing.
+
+                        Working with other developers on this project also
+                        introduced practical experience with collaborative
+                        development, experimentation, benchmarking and comparing
+                        different backend approaches.
+
+                    </p>
+
+
+                    <div class="project-section">
+
+                        <h4>Experiments & Topics</h4>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                Database query and performance experiments
+                            </li>
+
+                            <li>
+                                Redis caching strategies
+                            </li>
+
+                            <li>
+                                Pagination performance
+                            </li>
+
+                            <li>
+                                Synchronous vs asynchronous execution
+                            </li>
+
+                            <li>
+                                Background task processing with Celery
+                            </li>
+
+                            <li>
+                                Load testing with Locust
+                            </li>
+
+                            <li>
+                                API latency measurement and comparison
+                            </li>
+
+                            <li>
+                                Django and FastAPI performance experiments
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="project-section">
+
+                        <h4>Tech Stack</h4>
+
+                        <div class="tech-stack">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">Django</span>
+                            <span class="tech">FastAPI</span>
+                            <span class="tech">PostgreSQL</span>
+                            <span class="tech">Redis</span>
+                            <span class="tech">Celery</span>
+                            <span class="tech">Locust</span>
+                            <span class="tech">Docker</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-links">
+
                         <a
-                            href="https://github.com/amirhosein-madani"
+                            href="https://github.com/abolfazlmirzaie/api-latency-lab"
                             target="_blank"
-                            rel="noopener noreferrer"
-                            class="button secondary"
+                            class="project-link"
                         >
-                            GitHub ↗
+                            <i class="fa-brands fa-github"></i>
+                            View Project
                         </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     LIBRARY
+                ========================== -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-title">
+
+                            <h3>Library Management System</h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="project-description">
+
+                        A collaborative library management backend designed
+                        around common library workflows such as book management,
+                        authors, publishers, categories, loans and reservations.
+
+                        The project also includes a custom user system and
+                        role-based access control for different types of users.
+
+                        This project provided experience working as part of a
+                        development team and applying backend concepts in a
+                        larger multi-feature application.
+
+                    </p>
+
+
+                    <div class="project-section">
+
+                        <h4>Key Features</h4>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                Book, author, category and publisher management
+                            </li>
+
+                            <li>
+                                Book loan management
+                            </li>
+
+                            <li>
+                                Reservation system
+                            </li>
+
+                            <li>
+                                Custom user authentication
+                            </li>
+
+                            <li>
+                                Role-based access control
+                            </li>
+
+                            <li>
+                                REST API development
+                            </li>
+
+                            <li>
+                                PostgreSQL database
+                            </li>
+
+                            <li>
+                                Dockerized development environment
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="project-section">
+
+                        <h4>Tech Stack</h4>
+
+                        <div class="tech-stack">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">Django</span>
+                            <span class="tech">Django REST Framework</span>
+                            <span class="tech">PostgreSQL</span>
+                            <span class="tech">Redis</span>
+                            <span class="tech">Docker</span>
+                            <span class="tech">Pytest</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================
+                     CORE
+                ========================== -->
+
+                <article class="project-card">
+
+                    <div class="project-top">
+
+                        <div class="project-title">
+
+                            <h3>Core — Blog & Comment API</h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="project-description">
+
+                        A Django-based blog and comment platform that was one of
+                        my earlier backend projects. The project helped me move
+                        from traditional Django development toward REST API
+                        development and introduced several backend technologies
+                        that I continue to use in larger projects.
+
+                        It includes a custom user model, JWT authentication,
+                        blog and comment APIs, PostgreSQL, Redis, Celery and
+                        API documentation.
+
+                    </p>
+
+
+                    <div class="project-section">
+
+                        <h4>Key Features</h4>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                Custom user model
+                            </li>
+
+                            <li>
+                                JWT authentication
+                            </li>
+
+                            <li>
+                                Blog post management
+                            </li>
+
+                            <li>
+                                Comment system
+                            </li>
+
+                            <li>
+                                REST API endpoints
+                            </li>
+
+                            <li>
+                                Background tasks with Celery
+                            </li>
+
+                            <li>
+                                Redis integration
+                            </li>
+
+                            <li>
+                                Dockerized development environment
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="project-section">
+
+                        <h4>Tech Stack</h4>
+
+                        <div class="tech-stack">
+
+                            <span class="tech">Python</span>
+                            <span class="tech">Django</span>
+                            <span class="tech">DRF</span>
+                            <span class="tech">PostgreSQL</span>
+                            <span class="tech">Redis</span>
+                            <span class="tech">Celery</span>
+                            <span class="tech">JWT</span>
+                            <span class="tech">Docker</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/amirhosein-madani/core"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            View on GitHub
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Skills</span>
+
+                <h2>Technical Skills</h2>
+
+                <p>
+                    Technologies and tools I currently use in backend development.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-solid fa-server"></i>
+                        Backend
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">Python</span>
+                        <span class="tech">Django</span>
+                        <span class="tech">Django REST Framework</span>
+                        <span class="tech">REST APIs</span>
+                        <span class="tech">JWT</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-solid fa-database"></i>
+                        Databases
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">PostgreSQL</span>
+                        <span class="tech">SQL</span>
+                        <span class="tech">Django ORM</span>
+                        <span class="tech">Redis</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-brands fa-docker"></i>
+                        Infrastructure
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">Docker</span>
+                        <span class="tech">Docker Compose</span>
+                        <span class="tech">Redis</span>
+                        <span class="tech">Celery</span>
+                        <span class="tech">Gunicorn</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        <i class="fa-solid fa-code"></i>
+                        Development
+                    </h3>
+
+                    <div class="tech-stack">
+
+                        <span class="tech">Git</span>
+                        <span class="tech">GitHub</span>
+                        <span class="tech">Pytest</span>
+                        <span class="tech">OpenAPI</span>
+                        <span class="tech">Swagger</span>
 
                     </div>
 
@@ -683,31 +1500,221 @@
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =========================
+         CURRENTLY LEARNING
+    ========================== -->
 
-    <footer class="footer">
+    <section id="learning">
 
-        <div class="container footer-content">
+        <div class="container">
 
-            <p>
-                © 2026 Amir Madani
-            </p>
+            <div class="section-heading">
 
-            <p>
-                Built with HTML, CSS & JavaScript.
-            </p>
+                <span>Currently Learning</span>
+
+                <h2>What I'm Working On</h2>
+
+                <p>
+                    Current areas I am actively improving or preparing to learn next.
+                </p>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+
+                <div class="learning-card">
+
+                    <span class="number">
+                        01
+                    </span>
+
+                    <h3>
+                        Improving Docker
+                    </h3>
+
+                    <p>
+                        Going deeper into Docker and Docker Compose,
+                        including networking, volumes, images, containers,
+                        service configuration and practical development workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span class="number">
+                        02
+                    </span>
+
+                    <h3>
+                        SQL Server
+                    </h3>
+
+                    <p>
+                        Strengthening database fundamentals through SQL Server,
+                        including relational database concepts, SQL queries,
+                        database design and database management tools.
+                    </p>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <span class="number">
+                        03
+                    </span>
+
+                    <h3>
+                        Next Step: FastAPI
+                    </h3>
+
+                    <p>
+                        Planning to expand my Python backend experience with
+                        FastAPI and explore asynchronous API development after
+                        strengthening my current backend and database foundations.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </footer>
+    </section>
 
 
-    <script src="js/script.js"></script>
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Education</span>
+
+                <h2>Education</h2>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>
+                    Bachelor's Degree
+                </h3>
+
+                <div class="university">
+                    University
+                </div>
+
+                <div class="date">
+                    2024 — Present
+                </div>
+
+                <p style="margin-top: 15px; color: #94a3b8;">
+                    Studying while focusing professionally on backend development,
+                    Python, Django, databases and software engineering.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Contact</span>
+
+                <h2>Let's Connect</h2>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <p>
+                    I'm open to junior backend developer opportunities where
+                    I can contribute to real-world projects, work with an
+                    experienced team, and continue growing as a backend engineer.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a
+                        href="mailto:amirmadani901@gmail.com"
+                        class="contact-link"
+                    >
+                        <i class="fa-solid fa-envelope"></i>
+                        Email
+                    </a>
+
+
+                    <a
+                        href="https://github.com/amirhosein-madani"
+                        target="_blank"
+                        class="contact-link"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/amir-madanii/"
+                        target="_blank"
+                        class="contact-link"
+                    >
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Amir Madani. Built with HTML & CSS.
+        </p>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
+
