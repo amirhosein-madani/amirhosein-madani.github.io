@@ -765,6 +765,10 @@ a {
 }
 
 .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
     margin-top: 32px;
 }
 
@@ -865,7 +869,8 @@ a {
         font-size: 0.95rem;
     }
 
-    .hero-actions {
+    .hero-actions,
+    .contact-actions {
         flex-direction: column;
 
         align-items: stretch;
