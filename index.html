@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,20 @@
         content="#0b1120"
     >
 
+    <meta property="og:title" content="Amir Madani | Backend Developer">
+    <meta property="og:description" content="Backend developer working with Python, Django and Django REST Framework.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amirhosein-madani.github.io/">
+    <meta property="og:image" content="https://amirhosein-madani.github.io/favicon.svg">
+    <meta name="twitter:card" content="summary">
+
     <title>Amir Madani | Backend Developer</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link
         rel="stylesheet"
@@ -90,6 +102,8 @@
 
 
         nav {
+            position: relative;
+
             min-height: 72px;
 
             display: flex;
@@ -125,7 +139,8 @@
         }
 
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: #60a5fa;
         }
 
@@ -141,6 +156,49 @@
         .nav-button:hover {
             background: #2563eb;
             color: white !important;
+        }
+
+
+        .nav-toggle {
+            display: none;
+
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            width: 38px;
+            height: 38px;
+
+            background: transparent;
+            border: 1px solid #334155;
+            border-radius: 7px;
+
+            cursor: pointer;
+        }
+
+
+        .nav-toggle span {
+            display: block;
+            width: 16px;
+            height: 2px;
+            margin: 0 auto;
+            background: #e5e7eb;
+            transition: 0.2s ease;
+        }
+
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+            opacity: 0;
+        }
+
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
 
@@ -835,8 +893,46 @@
 
         @media (max-width: 850px) {
 
+            .nav-toggle {
+                display: flex;
+            }
+
+
             .nav-links {
-                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+
+                background: rgba(11, 17, 32, 0.97);
+                backdrop-filter: blur(16px);
+                border-bottom: 1px solid #1f2937;
+
+                max-height: 0;
+                overflow: hidden;
+
+                transition: max-height 0.25s ease;
+            }
+
+
+            .nav-links.open {
+                max-height: 360px;
+            }
+
+
+            .nav-links li {
+                width: 100%;
+            }
+
+
+            .nav-links a {
+                display: block;
+                padding: 14px 20px;
+                border-bottom: 1px solid #1f2937;
             }
 
 
@@ -944,7 +1040,7 @@
             </a>
 
 
-            <ul class="nav-links">
+            <ul class="nav-links" id="primaryNav">
 
                 <li>
                     <a href="#about">
@@ -986,6 +1082,19 @@
                 </li>
 
             </ul>
+
+
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+                aria-controls="primaryNav"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </nav>
 
@@ -1079,7 +1188,7 @@
 
 
                 <img
-                    src="assets/images/IMG_4522.jpeg.jpeg"
+                    src="assets/images/IMG_4522.jpeg"
                     alt="Amir Madani"
                     class="hero-photo"
                 >
@@ -1585,6 +1694,22 @@
                             <span class="tech">Pytest</span>
 
                         </div>
+
+                    </div>
+
+
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://github.com/amirhosein-madani/library-app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                            View on GitHub
+                        </a>
 
                     </div>
 
@@ -2175,8 +2300,51 @@
 </footer>
 
 
-
 <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const navToggle = document.getElementById("navToggle");
+        const primaryNav = document.getElementById("primaryNav");
+        const navLinks = primaryNav.querySelectorAll("a");
+        const sections = document.querySelectorAll("main section[id]");
+
+        navToggle.addEventListener("click", () => {
+            const isOpen = primaryNav.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                if (primaryNav.classList.contains("open")) {
+                    primaryNav.classList.remove("open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+
+        function highlightActiveSection() {
+            let current = "";
+
+            sections.forEach((section) => {
+                const top = section.offsetTop - 100;
+                if (window.scrollY >= top) {
+                    current = section.id;
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === `#${current}`
+                );
+            });
+        }
+
+        window.addEventListener("scroll", highlightActiveSection);
+        highlightActiveSection();
+
+    });
 
     const currentYear =
         document.getElementById("current-year");
