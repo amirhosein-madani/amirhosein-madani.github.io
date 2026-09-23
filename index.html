@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,31 +26,19 @@
     >
 
     <meta property="og:title" content="Amir Madani | Backend Developer">
-    <meta
-        property="og:description"
-        content="Backend developer working with Python, Django and Django REST Framework."
-    >
+    <meta property="og:description" content="Backend developer working with Python, Django and Django REST Framework.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://amirhosein-madani.github.io/">
     <meta property="og:image" content="https://amirhosein-madani.github.io/favicon.svg">
-
     <meta name="twitter:card" content="summary">
 
     <title>Amir Madani | Backend Developer</title>
 
-    <link
-        rel="icon"
-        type="image/svg+xml"
-        href="favicon.svg"
-    >
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link
         rel="stylesheet"
@@ -160,10 +147,8 @@
 
         .nav-button {
             padding: 9px 16px;
-
             border: 1px solid #2563eb;
             border-radius: 8px;
-
             color: #93c5fd !important;
         }
 
@@ -194,14 +179,10 @@
 
         .nav-toggle span {
             display: block;
-
             width: 16px;
             height: 2px;
-
             margin: 0 auto;
-
             background: #e5e7eb;
-
             transition: 0.2s ease;
         }
 
@@ -316,7 +297,6 @@
             height: 220px;
 
             object-fit: cover;
-            object-position: center 25%;
 
             border-radius: 50%;
 
@@ -326,8 +306,6 @@
                 0 0 40px rgba(37, 99, 235, 0.18);
 
             flex-shrink: 0;
-
-            display: block;
         }
 
 
@@ -922,25 +900,19 @@
 
             .nav-links {
                 position: absolute;
-
                 top: 100%;
                 left: 0;
                 right: 0;
 
                 flex-direction: column;
-
                 align-items: flex-start;
-
                 gap: 0;
 
                 background: rgba(11, 17, 32, 0.97);
-
                 backdrop-filter: blur(16px);
-
                 border-bottom: 1px solid #1f2937;
 
                 max-height: 0;
-
                 overflow: hidden;
 
                 transition: max-height 0.25s ease;
@@ -959,9 +931,7 @@
 
             .nav-links a {
                 display: block;
-
                 padding: 14px 20px;
-
                 border-bottom: 1px solid #1f2937;
             }
 
@@ -1070,10 +1040,7 @@
             </a>
 
 
-            <ul
-                class="nav-links"
-                id="primaryNav"
-            >
+            <ul class="nav-links" id="primaryNav">
 
                 <li>
                     <a href="#about">
@@ -1124,11 +1091,9 @@
                 aria-expanded="false"
                 aria-controls="primaryNav"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
         </nav>
@@ -1223,7 +1188,7 @@
 
 
                 <img
-                    src="assets/images/IMG_4522.jpeg.jpeg"
+                    src="assets/images/IMG_4522.jpeg"
                     alt="Amir Madani"
                     class="hero-photo"
                 >
@@ -1277,7 +1242,7 @@
 
 
                     <p>
-                        My experience comes mainly from building complete backend
+                        My main experience comes from building complete backend
                         projects rather than only working with isolated tutorials.
                         I have worked with authentication, authorization,
                         relational databases, caching, background tasks,
@@ -1423,11 +1388,18 @@
                     <p class="project-description">
 
                         A full-featured ecommerce platform built with Django,
-                        combining a server-rendered application with a REST API.
+                        combining a server-rendered MVT application with a
+                        REST API for backend functionality and client access.
 
-                        The project covers products, shopping carts, checkout,
-                        orders, payments and customer reviews, with a focus on
-                        realistic backend business rules and data consistency.
+                        The project covers the main lifecycle of an ecommerce
+                        system, from product discovery and shopping cart
+                        management to checkout, orders, payments and customer
+                        reviews.
+
+                        The main focus was implementing realistic business rules
+                        and backend concerns such as stock validation,
+                        cart consistency, authentication, caching,
+                        background processing and concurrent updates.
 
                     </p>
 
@@ -1445,56 +1417,11 @@
                             <li>JWT authentication and role-based authorization</li>
                             <li>Product, category and image management</li>
                             <li>Search, filtering, sorting and pagination</li>
-                            <li>Discount and final-price calculation</li>
-                            <li>Redis-based guest shopping cart</li>
-                            <li>Database-backed cart for authenticated users</li>
-                            <li>Cart merging after user authentication</li>
-                            <li>Stock validation during cart operations</li>
-                            <li>Order and checkout workflow</li>
-                            <li>Payment integration and payment workflow</li>
-                            <li>Customer reviews and moderation</li>
-                            <li>Admin dashboard and management functionality</li>
-                            <li>Automated API and business-logic testing</li>
-                            <li>Swagger / OpenAPI documentation</li>
-
-                        </ul>
-
-                    </div>
-
-
-
-                    <div class="project-section">
-
-                        <h4>
-                            Technical Highlights
-                        </h4>
-
-
-                        <ul class="feature-list">
-
-                            <li>
-                                PostgreSQL for relational data and transactional workflows
-                            </li>
-
-                            <li>
-                                Redis for caching and temporary cart data
-                            </li>
-
-                            <li>
-                                Cache locking for concurrent cart updates
-                            </li>
-
-                            <li>
-                                Django ORM annotations for database-level calculations
-                            </li>
-
-                            <li>
-                                Celery for background task processing
-                            </li>
-
-                            <li>
-                                Dockerized development environment
-                            </li>
+                            <li>Redis-based guest cart with DB-backed cart and merging for authenticated users</li>
+                            <li>Stock validation and cache locking for concurrent cart updates</li>
+                            <li>Order, checkout and payment workflow</li>
+                            <li>Customer reviews and admin dashboard</li>
+                            <li>Automated testing and API documentation</li>
 
                         </ul>
 
@@ -1566,13 +1493,17 @@
 
                     <p class="project-description">
 
-                        A collaborative backend performance project focused on
-                        understanding API latency and comparing different
-                        backend implementation strategies.
+                        A collaborative backend performance and experimentation
+                        project focused on understanding API latency and the
+                        effect of different backend implementation strategies.
 
-                        The project explores database performance, caching,
-                        synchronous and asynchronous execution, background
-                        processing and load testing.
+                        The project explores database performance, Redis caching,
+                        pagination, synchronous and asynchronous execution,
+                        background processing with Celery, and load testing.
+
+                        Working with other developers also provided practical
+                        experience with collaborative development, experimentation,
+                        benchmarking and comparing different backend approaches.
 
                     </p>
 
@@ -1663,12 +1594,14 @@
 
                     <p class="project-description">
 
-                        A collaborative library management backend covering
-                        common workflows such as books, authors, publishers,
-                        categories, loans and reservations.
+                        A collaborative library management backend designed
+                        around common library workflows such as book management,
+                        authors, publishers, categories, loans and reservations.
 
-                        The project also includes custom authentication,
-                        role-based access control and REST API development.
+                        The project includes a custom user system and
+                        role-based access control for different types of users,
+                        while also providing experience with team-based backend
+                        development and a multi-feature application.
 
                     </p>
 
@@ -1689,8 +1622,6 @@
                             <li>Custom user authentication</li>
                             <li>Role-based access control</li>
                             <li>REST API development</li>
-                            <li>PostgreSQL database</li>
-                            <li>Dockerized development environment</li>
 
                         </ul>
 
@@ -1758,13 +1689,16 @@
 
                     <p class="project-description">
 
-                        A Django-based blog and comment platform that helped me
-                        transition from traditional Django development toward
-                        REST API development.
+                        A Django-based blog and comment platform that was one of
+                        my earlier backend projects. It helped me transition
+                        from traditional Django development toward REST API
+                        development and introduced several backend technologies
+                        that I continued using in larger projects.
 
-                        The project includes authentication, blog and comment
-                        functionality, background processing, Redis integration
-                        and production deployment.
+                        The project includes a custom user model,
+                        JWT authentication, blog and comment functionality,
+                        background task processing, Redis integration,
+                        and a production deployment workflow.
 
                     </p>
 
@@ -1785,8 +1719,6 @@
                             <li>Comment system</li>
                             <li>REST API endpoints</li>
                             <li>Background tasks with Celery</li>
-                            <li>Redis integration</li>
-                            <li>Dockerized development environment</li>
 
                         </ul>
 
@@ -1889,7 +1821,7 @@
 
 
                 <p>
-                    Technologies and tools I use or work with
+                    Technologies, tools and languages I use or work with
                     in backend development.
                 </p>
 
@@ -1955,6 +1887,7 @@
 
                         <span class="tech">Docker</span>
                         <span class="tech">Docker Compose</span>
+                        <span class="tech">Redis</span>
                         <span class="tech">Celery</span>
                         <span class="tech">Gunicorn</span>
                         <span class="tech">Nginx</span>
@@ -2290,6 +2223,7 @@
                         Download CV
                     </a>
 
+
                 </div>
 
             </div>
@@ -2317,103 +2251,54 @@
 </footer>
 
 
-
 <script>
 
     document.addEventListener("DOMContentLoaded", () => {
 
-        const navToggle =
-            document.getElementById("navToggle");
-
-        const primaryNav =
-            document.getElementById("primaryNav");
-
-        const navLinks =
-            primaryNav.querySelectorAll("a");
-
-        const sections =
-            document.querySelectorAll("main section[id]");
-
+        const navToggle = document.getElementById("navToggle");
+        const primaryNav = document.getElementById("primaryNav");
+        const navLinks = primaryNav.querySelectorAll("a");
+        const sections = document.querySelectorAll("main section[id]");
 
         navToggle.addEventListener("click", () => {
-
-            const isOpen =
-                primaryNav.classList.toggle("open");
-
-            navToggle.setAttribute(
-                "aria-expanded",
-                String(isOpen)
-            );
-
+            const isOpen = primaryNav.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
         });
-
 
         navLinks.forEach((link) => {
-
             link.addEventListener("click", () => {
-
                 if (primaryNav.classList.contains("open")) {
-
                     primaryNav.classList.remove("open");
-
-                    navToggle.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
+                    navToggle.setAttribute("aria-expanded", "false");
                 }
-
             });
-
         });
 
-
         function highlightActiveSection() {
-
             let current = "";
 
-
             sections.forEach((section) => {
-
-                const top =
-                    section.offsetTop - 100;
-
-
+                const top = section.offsetTop - 100;
                 if (window.scrollY >= top) {
-
                     current = section.id;
-
                 }
-
             });
 
-
             navLinks.forEach((link) => {
-
                 link.classList.toggle(
                     "active",
                     link.getAttribute("href") === `#${current}`
                 );
-
             });
-
         }
 
-
-        window.addEventListener(
-            "scroll",
-            highlightActiveSection
-        );
-
-
+        window.addEventListener("scroll", highlightActiveSection);
         highlightActiveSection();
 
     });
 
-
     const currentYear =
         document.getElementById("current-year");
-
 
     if (currentYear) {
 
@@ -2428,4 +2313,3 @@
 </body>
 
 </html>
-
